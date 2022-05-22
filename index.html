@@ -5,20 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banana Republic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body class="bg-secondary">
     <div class="wrapper d-flex align-items-center">
         <div class="container">
             <div class="row">
-                <div class="col-4 bg-warning rounded-left">
-                    <div class="p-5">Hello</div>
+                <div class="col-4 profileContainer">
+                    <div class="img-holder d-flex justify-content-center p-5">
+                        <img src="src/img/face.svg" class="img-fluid" />
+                    </div>
+                    <div class="content text-center">
+                        <h1>Front-end Challange!</h1>
+                        <p>This is a design that you will need <br class='d-none d-md-block' />to code up and impress us</p>
+                        <div class="btn-holder">
+                            <a href="#" class="rounded-circle nextSection">
+                                <img src="src/img/arrow.svg" class="img-fluid"/>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-8 bg-light rounded-right">
-                    <div class="p-5">World</div>
+                <div class="col-8" id="form-container">
+                    <div class="form-holder">
+                        <form>
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-2 col-form-label">Name</label>
+                                <div class="col">
+                                  <input type="text" class="form-control" id="colFormLabel" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label" for="gender">Gender: </label>
+                                <div class="col">
+                                    <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required>
+                                    <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+        
+                                    <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required>
+                                    <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>        
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="birthday" class="col-sm-2 col-form-label">Birthday:</label>
+                                <div class="col">
+                                    <input type="date" class="form-control" placeholder="01/02/2018" id="birthday" name="birthday">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col">
+                                  <input type="email" class="form-control" id="colFormLabel" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-2 col-form-label">Mobile</label>
+                                <div class="col">
+                                  <input type="text" class="form-control" id="colFormLabel" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="colFormLabel" class="col-sm-2 col-form-label">Customer ID</label>
+                                <div class="col">
+                                  <input type="text" class="form-control" id="colFormLabel" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary-outline border border-primary">Cancel</button>
+                                <button type="submit" class="btn btn-primary" onclick="myFunction()">Save</button>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+
+                <div class="col-8" id="contentContainer">
+                    <div class="p-5">
+                        <div class="content">
+                            <h2 class="h1">My World Today</h2>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et masesuadada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies aget, tempor sit amet, ante. 
+                                <a href="#">View all days</a> eu libero sit amet quam agestas semper. Aenean  ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. 
+                                Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. 
+                                Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id  cursus faucibus, tortor neque eugue, eu vulputate magna eros eu erat. Aliquam erat</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>

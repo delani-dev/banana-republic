@@ -32,57 +32,82 @@
                     <div class="form-holder">
                         <form>
                             <div class="form-group row">
-                                <label for="colFormLabel" class="col-sm-2 col-form-label">Name</label>
+                                <label for="colFormLabel" class="col-md-3 col-form-label">Name</label>
                                 <div class="col">
                                   <input type="text" class="form-control" id="colFormLabel" placeholder="Name">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="gender">Gender: </label>
+                                <label class="col-md-3 col-form-label" for="gender">Gender: </label>
                                 <div class="col">
                                     <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required>
-                                    <label class="" for="male">Male</label>
+                                    <label class="" for="male">
+                                        <span class="image-holder">
+                                            <img src="src/img/mars-symbol--white.svg" class="img-light" />
+                                            <img src="src/img/mars-symbol.svg" class="img-dark" />Male
+                                        </span>
+                                    </label>
         
                                     <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required>
-                                    <label class="" for="female">Female</label>        
+                                    <label class="" for="female">
+                                        <span class="image-holder">
+                                            <img src="src/img/venus-symbol--white.svg" class="img-light" />
+                                            <img src="src/img/venus-symbol.svg" class="img-dark" />Female
+                                        </span>
+                                    </label>        
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="birthday" class="col-sm-2 col-form-label">Birthday:</label>
+                                <label for="birthday" class="col-md-3 col-form-label">Birthday:</label>
                                 <div class="col">
                                     <input type="date" class="form-control" placeholder="01/02/2018" id="birthday" name="birthday">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                                <label for="colFormLabel" class="col-md-3 col-form-label">Email</label>
                                 <div class="col">
-                                  <input type="email" class="form-control" id="colFormLabel" placeholder="Name">
+                                  <input type="email" class="form-control" id="colFormLabel" placeholder="kendall@gmail.com">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="colFormLabel" class="col-sm-2 col-form-label">Mobile</label>
+                                <label for="colFormLabel" class="col-md-3 col-form-label">Mobile</label>
                                 <div class="col">
-                                  <input type="text" class="form-control" id="colFormLabel" placeholder="Name">
+                                  <input type="text" class="form-control" id="colFormLabel" placeholder="+91 98765 43210">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="colFormLabel" class="col-sm-2 col-form-label">Customer ID</label>
+                                <label for="colFormLabel" class="col-md-3 col-form-label">Customer ID</label>
                                 <div class="col">
-                                  <input type="text" class="form-control" id="colFormLabel" placeholder="Name">
+                                  <input type="text" class="form-control" id="colFormLabel" placeholder="576802 ERD0348 45">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="gender">Membership: </label>
-                                <div class="col">
-                                    <input type="radio" class="btn-check" name="gender" id="classic" autocomplete="off" required>
-                                    <label class="" for="classic">Classic</label>
-        
-                                    <input type="radio" class="btn-check" name="gender" id="silva" autocomplete="off" required>
-                                    <label class="" for="silva">Silva</label>  
+                                <label class="col-md-3 col-form-label" for="gender">Membership: </label>
+                                <div class="col justify-content-between d-flex">
+                                    <input type="radio" class="btn-check" name="member" id="classic" autocomplete="off" required>
+                                    <label class="" for="classic">
+                                        <span class="image-holder">
+                                            <img src="src/img/card--white.svg" class="img-light" />
+                                            <img src="src/img/card.svg" class="img-dark" />Classic
+                                        </span>
+                                    </label>
+                                    
+                                    <input type="radio" class="btn-check" name="member" id="silva" autocomplete="off" required>
+                                    <label class="" for="silva">
+                                        <span class="image-holder">
+                                            <img src="src/img/card--white.svg" class="img-light" />
+                                            <img src="src/img/card.svg" class="img-dark" />Silva
+                                        </span>
+                                    </label>  
 
-                                    <input type="radio" class="btn-check" name="gender" id="gold" autocomplete="off" required>
-                                    <label class="" for="gold">Gold</label>     
+                                    <input type="radio" class="btn-check" name="member" id="gold" autocomplete="off" required>
+                                    <label class="" for="gold">
+                                        <span class="image-holder">
+                                            <img src="src/img/card--white.svg" class="img-light" />
+                                            <img src="src/img/card.svg" class="img-dark" />Gold
+                                        </span>
+                                    </label>     
                                 </div>
                             </div>
 
@@ -95,9 +120,9 @@
                 </div>
 
                 <div class="col-8" id="contentContainer">
-                    <div class="p-5">
+                    <div class="p-4">
                         <div class="content">
-                            <h2 class="h1">My World Today</h2>
+                            <h2 class="h1 pb-4">My World Today</h2>
                             <p>Pellentesque habitant morbi tristique senectus et netus et masesuadada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies aget, tempor sit amet, ante. 
                                 <a href="#">View all days</a> eu libero sit amet quam agestas semper. Aenean  ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. 
                                 Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. 

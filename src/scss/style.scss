@@ -70,6 +70,7 @@
             background-color: #ff9200;
             border-top-right-radius: 30px;
             border-bottom-right-radius: 30px;
+            padding: 60px 45px;
         }
     }
 
@@ -84,41 +85,129 @@
 
         .form-holder {
             font-size: 14px;
-            padding: 80px 45px;
+            padding: 60px 45px;
             color: #000;
             font-weight: 500;
 
             .form-control {
                 font-size: 14px;
-                color: #000;
+                color: #373d40;
+                background-color: #f5f8f9;
+                border-color: #f5f8f9;
+                padding: 20px 12px;
 
                 &:focus {
                     color: #000;
                     background-color: #fff;
-                    border-color: #373d40;
+                    border-color: #6c757d;
                     box-shadow: none;
                 }
             }
+
+            .form-group {
+                input[type="radio"] {
+                    display: none;
+                    cursor: pointer;
+
+                    + label {
+                        margin-left: 10px;
+                        color: #ced4da;
+                    }
+                }
+    
+                .image-holder {
+                    position: relative;
+                    margin-right: 15px;
+                    cursor: pointer;
+
+                    &::before {    
+                        content: '';
+                        position: absolute;
+                        width: 35px;
+                        height: 35px;
+                        background-color: #cad7dd;
+                        border-radius: 50%;
+                        top: -6px;
+                        bottom: 0;
+                        left: -8px;
+                        right: 0;
+                        opacity: 0.25;
+                    }
+
+                    img {
+                        position: relative;
+                        margin-right: 15px;
+                        max-width: 18px;
+                        width: 100%;
+                        //display: block;
+                    }
+
+                    .img-light {
+                        display: none;
+                    }
+                }
+                input[type="radio"]:checked {
+                    position: relative;
+
+                    + label{
+                        .image-holder {
+                            &:before {
+                                opacity: 0.8;
+                            }
+                            
+                            .img-dark {
+                                display: none;
+                            }
+
+                            .img-light {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+
+               
+            }
+
         }
     }
 
     .btn {
-        padding: 10px 60px;
+        padding: 10px 45px;
         text-transform: uppercase;
 
         &.btn-primary {
          background-color: #49c8a8;
          color: #fff;   
-         border: none;
+         border: 1px solid #49c8a8;
+
+         &:hover, &:focus {
+             border: 1px solid #49c8a8;
+             color: #49c8a8;
+             background-color: #fff;
+             box-shadow: none;
+         }
         }
 
         &.btn-secondary {
             color: #373d40;
-            background-color: #cad7dd;
-            border: none;
+            background-color: #f5f8f9;
+            border: 1px solid #f5f8f9;
+
+            &:hover, &:focus {
+                color: #f5f8f9;
+                background-color: #373d40;
+                border: 1px solid #373d40;
+                box-shadow: none;
+            }
         }
     }
-
+    
+    a {
+        color: #373d40;
+        font-weight: 600;
+        text-decoration: underline;
+    }
 }
 
 

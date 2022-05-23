@@ -1,8 +1,3 @@
-// A $( document ).ready() block.
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
-
 $( '.nextSection').click(function() {
   $('#form-container').toggleClass('hideForm');
   $('#contentContainer').toggleClass('showContent');
@@ -11,5 +6,6 @@ $( '.nextSection').click(function() {
 
 $(".clearForm").click(function() {
   $(".form-group input").val("");
+  $(".form-group input").focus("");
 });
 

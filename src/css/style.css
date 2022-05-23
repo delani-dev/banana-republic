@@ -10031,12 +10031,13 @@ h3 {
 .wrapper #contentContainer.showContent {
   display: block;
   background-color: #ff9200;
-  padding: 60px 45px;
+  padding: 60px 18px;
 }
 @media screen and (min-width: 768px) {
   .wrapper #contentContainer.showContent {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+    padding: 60px 45px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -10051,9 +10052,15 @@ h3 {
 }
 .wrapper #form-container .form-holder {
   font-size: 14px;
-  padding: 60px 45px;
-  color: #000;
+  padding: 50px 0px;
+  color: #373d40;
   font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .wrapper #form-container .form-holder {
+    padding: 60px 45px;
+    color: #000;
+  }
 }
 .wrapper #form-container .form-holder .form-control {
   font-size: 14px;
@@ -10063,10 +10070,17 @@ h3 {
   padding: 20px 12px;
 }
 .wrapper #form-container .form-holder .form-control:focus {
-  color: #000;
-  background-color: #fff;
-  border-color: #6c757d;
+  background-color: #6c757d;
+  border-color: #cad7dd;
   box-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .wrapper #form-container .form-holder .form-control:focus {
+    color: #000;
+    background-color: #fff;
+    border-color: #6c757d;
+    box-shadow: #6c757d;
+  }
 }
 .wrapper #form-container .form-holder .form-group input[type=radio] {
   display: none;
@@ -10092,7 +10106,12 @@ h3 {
   bottom: 0;
   left: -8px;
   right: 0;
-  opacity: 0.25;
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .wrapper #form-container .form-holder .form-group .image-holder::before {
+    opacity: 0.25;
+  }
 }
 .wrapper #form-container .form-holder .form-group .image-holder img {
   position: relative;
@@ -10107,7 +10126,12 @@ h3 {
   position: relative;
 }
 .wrapper #form-container .form-holder .form-group input[type=radio]:checked + label .image-holder:before {
-  opacity: 0.8;
+  opacity: 0.5;
+}
+@media screen and (min-width: 678px) {
+  .wrapper #form-container .form-holder .form-group input[type=radio]:checked + label .image-holder:before {
+    opacity: 0.8;
+  }
 }
 .wrapper #form-container .form-holder .form-group input[type=radio]:checked + label .image-holder .img-dark {
   display: none;

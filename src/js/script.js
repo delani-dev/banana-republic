@@ -8,3 +8,8 @@ $( '.nextSection').click(function() {
   $('#contentContainer').toggleClass('showContent');
   $('.nextSection').toggleClass('formHidden');
 });
+
+$(".clearForm").click(function() {
+  $(".form-group input").val("");
+});
+

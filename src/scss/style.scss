@@ -1,9 +1,16 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+body {
+    background: linear-gradient(-45deg, #1f1310, #373d40);
+	background-size: cover;
+	animation: gradient 10s ease infinite;
+}
+
 .wrapper {
     height: auto;
     color: #373d40;
     font-family: 'Open Sans', 'Roboto', sans-serif;
+
 
     @media screen and (min-width: 768px) {
         height: 100vh;
@@ -13,6 +20,7 @@
         background-color: #ffd300;
         padding-top: 40px;
         padding-bottom: 40px;
+        z-index: 2;
 
         @media screen and (min-width: 768px) {
             border-top-left-radius: 30px;
@@ -28,6 +36,9 @@
     }
 
     .content {
+        position: relative;
+        animation: textAnimation 2s ease-out;
+
         h1, .h1 {
             font-size: 28px;
             font-weight: 700;
@@ -105,6 +116,7 @@
             display: block;
             background-color: #ff9200;
             padding: 60px 18px;
+            z-index: 1;
 
             @media screen and (min-width: 768px) {
                 border-top-right-radius: 30px;
@@ -278,3 +290,25 @@
 }
 
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes textAnimation {
+    0% {
+      opacity: 0;
+      left: -700px;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }

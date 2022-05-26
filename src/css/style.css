@@ -9943,6 +9943,12 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  background: linear-gradient(-45deg, #1f1310, #373d40);
+  background-size: cover;
+  animation: gradient 10s ease infinite;
+}
+
 .wrapper {
   height: auto;
   color: #373d40;
@@ -9957,6 +9963,7 @@ h3 {
   background-color: #ffd300;
   padding-top: 40px;
   padding-bottom: 40px;
+  z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .wrapper .profileContainer {
@@ -9967,6 +9974,10 @@ h3 {
 .wrapper .profileContainer .img-holder img {
   width: 100%;
   max-width: 180px;
+}
+.wrapper .content {
+  position: relative;
+  animation: textAnimation 2s ease-out;
 }
 .wrapper .content h1, .wrapper .content .h1 {
   font-size: 28px;
@@ -10032,6 +10043,7 @@ h3 {
   display: block;
   background-color: #ff9200;
   padding: 60px 18px;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .wrapper #contentContainer.showContent {
@@ -10175,4 +10187,26 @@ h3 {
   color: #373d40;
   font-weight: 600;
   text-decoration: underline;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    left: -700px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }

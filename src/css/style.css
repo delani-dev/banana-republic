@@ -9946,14 +9946,12 @@ h3 {
 body {
   background: linear-gradient(-45deg, #1f1310, #373d40);
   background-size: cover;
-  animation: gradient 10s ease infinite;
-}
-
-.wrapper {
   height: auto;
   color: #373d40;
   font-family: "Open Sans", "Roboto", sans-serif;
+  animation: gradient 10s ease infinite;
 }
+
 @media screen and (min-width: 768px) {
   .wrapper {
     height: 100vh;
@@ -9974,10 +9972,6 @@ body {
 .wrapper .profileContainer .img-holder img {
   width: 100%;
   max-width: 180px;
-}
-.wrapper .content {
-  position: relative;
-  animation: textAnimation 2s ease-out;
 }
 .wrapper .content h1, .wrapper .content .h1 {
   font-size: 28px;
@@ -10040,20 +10034,28 @@ body {
   display: none;
 }
 .wrapper #contentContainer.showContent {
+  position: relative;
   display: block;
   background-color: #ff9200;
   padding: 60px 18px;
+  margin: 0 -15px;
   z-index: 1;
+  animation: textSlideDown 1s;
 }
 @media screen and (min-width: 768px) {
   .wrapper #contentContainer.showContent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     padding: 60px 45px;
+    z-index: 1;
+    animation: textAnimation 1s ease-in;
   }
 }
 @media screen and (min-width: 768px) {
-  .wrapper #form-container {
+  .wrapper .main {
     background-color: #fff;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -10062,52 +10064,52 @@ body {
 .wrapper #form-container.hideForm {
   display: none;
 }
-.wrapper #form-container .form-holder {
+.wrapper #form-container.form-holder {
   font-size: 14px;
   padding: 50px 0px;
   color: #373d40;
   font-weight: 500;
 }
 @media screen and (min-width: 768px) {
-  .wrapper #form-container .form-holder {
+  .wrapper #form-container.form-holder {
     padding: 60px 45px;
     color: #000;
   }
 }
-.wrapper #form-container .form-holder .form-control {
+.wrapper #form-container.form-holder .form-control {
   font-size: 14px;
   color: #373d40;
   background-color: #f5f8f9;
   border-color: #f5f8f9;
   padding: 20px 12px;
 }
-.wrapper #form-container .form-holder .form-control:focus {
+.wrapper #form-container.form-holder .form-control:focus {
   background-color: #6c757d;
   border-color: #cad7dd;
   box-shadow: none;
 }
 @media screen and (min-width: 768px) {
-  .wrapper #form-container .form-holder .form-control:focus {
+  .wrapper #form-container.form-holder .form-control:focus {
     color: #000;
     background-color: #fff;
     border-color: #6c757d;
     box-shadow: #6c757d;
   }
 }
-.wrapper #form-container .form-holder .form-group input[type=radio] {
+.wrapper #form-container.form-holder .form-group input[type=radio] {
   display: none;
   cursor: pointer;
 }
-.wrapper #form-container .form-holder .form-group input[type=radio] + label {
+.wrapper #form-container.form-holder .form-group input[type=radio] + label {
   margin-left: 10px;
   color: #ced4da;
 }
-.wrapper #form-container .form-holder .form-group .image-holder {
+.wrapper #form-container.form-holder .form-group .image-holder {
   position: relative;
   margin-right: 15px;
   cursor: pointer;
 }
-.wrapper #form-container .form-holder .form-group .image-holder::before {
+.wrapper #form-container.form-holder .form-group .image-holder::before {
   content: "";
   position: absolute;
   width: 35px;
@@ -10121,34 +10123,34 @@ body {
   opacity: 1;
 }
 @media screen and (min-width: 768px) {
-  .wrapper #form-container .form-holder .form-group .image-holder::before {
+  .wrapper #form-container.form-holder .form-group .image-holder::before {
     opacity: 0.25;
   }
 }
-.wrapper #form-container .form-holder .form-group .image-holder img {
+.wrapper #form-container.form-holder .form-group .image-holder img {
   position: relative;
   margin-right: 15px;
   max-width: 18px;
   width: 100%;
 }
-.wrapper #form-container .form-holder .form-group .image-holder .img-light {
+.wrapper #form-container.form-holder .form-group .image-holder .img-light {
   display: none;
 }
-.wrapper #form-container .form-holder .form-group input[type=radio]:checked {
+.wrapper #form-container.form-holder .form-group input[type=radio]:checked {
   position: relative;
 }
-.wrapper #form-container .form-holder .form-group input[type=radio]:checked + label .image-holder:before {
+.wrapper #form-container.form-holder .form-group input[type=radio]:checked + label .image-holder:before {
   opacity: 0.5;
 }
 @media screen and (min-width: 678px) {
-  .wrapper #form-container .form-holder .form-group input[type=radio]:checked + label .image-holder:before {
+  .wrapper #form-container.form-holder .form-group input[type=radio]:checked + label .image-holder:before {
     opacity: 0.8;
   }
 }
-.wrapper #form-container .form-holder .form-group input[type=radio]:checked + label .image-holder .img-dark {
+.wrapper #form-container.form-holder .form-group input[type=radio]:checked + label .image-holder .img-dark {
   display: none;
 }
-.wrapper #form-container .form-holder .form-group input[type=radio]:checked + label .image-holder .img-light {
+.wrapper #form-container.form-holder .form-group input[type=radio]:checked + label .image-holder .img-light {
   display: inline-block;
 }
 .wrapper .btn {
@@ -10202,8 +10204,18 @@ body {
 }
 @keyframes textAnimation {
   0% {
-    opacity: 0;
-    left: -700px;
+    opacity: 0.5;
+    left: -300px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes textSlideDown {
+  0% {
+    opacity: 0.5;
+    top: -500px;
   }
   100% {
     opacity: 1;
